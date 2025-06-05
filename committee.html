@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <base href=".">
+    <link rel="shortcut icon" type="image/png" href="assets/LOGOCUSAT.png" />
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css" />
+    <meta name="description" content="Conference Template">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta name="KeyWords" content="Conference">
+    <title>Conference Template</title>
+    <style>
+        .navigation {
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+
+        table.navigation {
+            width: auto;
+            margin: 0 auto;
+            border-spacing: 5px;
+        }
+
+        table.navigation a {
+            cursor: pointer;
+            color: #000;
+            text-decoration: none;
+            padding: 6px 12px;
+            display: inline-block;
+        }
+
+        table.navigation a.active,
+        table.navigation a:hover {
+            color: #e91e63;
+            font-weight: bold;
+        }
+
+        .submenu {
+            display: none;
+            margin: 15px auto 30px auto;
+            padding-left: 20px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #0044cc;
+            max-width: 900px;
+            font-size: 14px;
+            min-height: 40px;
+        }
+
+        .submenu ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .submenu li {
+            margin: 8px 0;
+        }
+
+        .submenu a {
+            text-decoration: none;
+            color: #0077ee;
+        }
+
+        .submenu a:hover {
+            text-decoration: underline;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            text-align: center;
+            color: #004080;
+        }
+
+        footer {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            font-size: 14px;
+            color: #777;
+        }
+
+        footer a {
+            color: #0044cc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .map-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        iframe {
+            width: 90%;
+            height: 400px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="banner">
+        <img src="assets/Cusatnewimage.jpg" alt="Conference Template Banner">
+
+        <div class="top-left">
+            <span class="title1">AICAPS</span>
+            <span class="year">2026</span>
+        </div>
+
+        <div class="bottom-right" style="color: red;">
+            February 11–13, 2025 <br>
+            Department of Computer Applications, CUSAT, Kochi
+        </div>
+    </div>
+
+    <table class="navigation" role="navigation">
+        <tr>
+            <td class="navigation"><a href="index.html" class="current active">Home</a></td>
+            <td class="navigation"><a href="important_dates.html">Important Dates</a></td>
+            <td class="navigation"><a href="keynotes.html">Keynotes</a></td>
+            <td class="navigation"><a href="submissions.html">Submissions</a></td>
+            <td class="navigation"><a href="venue.html">Venue &amp; Travel</a></td>
+            <td class="navigation"><a href="committee.html">Committee</a></td>
+            <td class="navigation"><a href="sponsorships.html">Sponsorships</a></td>
+        </tr>
+    </table>
+
+    <!-- Submenus -->
+    <div id="keynotesSub" class="submenu">
+        <ul>
+            <li><a href="#speaker1">Keynote Speaker 1 - Dr. John Doe</a></li>
+            <li><a href="#speaker2">Keynote Speaker 2 - Prof. Jane Smith</a></li>
+        </ul>
+    </div>
+
+    <div id="submissionsSub" class="submenu">
+        <ul>
+            <li><a href="#call-for-papers">Call for Papers</a></li>
+            <li><a href="#author-guidelines">Author Guidelines</a></li>
+        </ul>
+    </div>
+
+    <div id="venueSub" class="submenu">
+        <ul>
+            <li><a href="#conference-venue">Conference Venue</a></li>
+            <li><a href="#how-to-reach">How to Reach</a></li>
+            <li><a href="#tourist-places">Tourist Places Nearby</a></li>
+        </ul>
+    </div>
+
+    <div id="committeeSub" class="submenu">
+        <ul>
+            <li><a href="#organizing-committee">Organizing Committee</a></li>
+            <li><a href="#technical-committee">Technical Committee</a></li>
+        </ul>
+    </div>
+
+    <div id="sponsorshipsSub" class="submenu">
+        <p>Information about sponsorship opportunities will be updated soon.</p>
+    </div>
+<div class="content-container">
+    <h2 id="organizing-committee">Organizing Committee</h2>
+
+    <h3>General Chair</h3>
+    <p>
+        <strong>Dr. Judy M. V.</strong><br>
+        Professor<br>
+        Department of Computer Applications, CUSAT<br>
+        Email: <a href="mailto:judy.nair@gmail.com">judy.nair@gmail.com</a><br>
+        IEEE Member No: [To be updated]
+    </p>
+
+    <h3>Technical Program Committee (TPC) Chair</h3>
+    <p>
+        <strong>Dr. Vinod P.</strong><br>
+        Professor and Head<br>
+        Department of Computer Applications, CUSAT<br>
+        Email: <a href="mailto:vinod.p@cusat.ac.in">vinod.p@cusat.ac.in</a><br>
+        IEEE Member No: [To be updated]
+    </p>
+
+    <h3>Publication Chairs</h3>
+    <p>
+        <strong>Dr. Sabu M. K.</strong><br>
+        Professor<br>
+        Department of Computer Applications, CUSAT<br>
+        Email: <a href="mailto:sabumk@cusat.ac.in">sabumk@cusat.ac.in</a><br>
+        IEEE Member No: [To be updated]
+    </p>
+    <p>
+        <strong>Dr. Deepika M. P.</strong><br>
+        Assistant Professor<br>
+        Department of Computer Applications, CUSAT<br>
+        Email: <a href="mailto:[email protected]">[email protected]</a><br>
+        IEEE Member No: [To be updated]
+    </p>
+
+    <h3>Publicity Chair</h3>
+    <p>
+        <strong>Dr. Malathi S.</strong><br>
+        Professor<br>
+        Department of Computer Applications, CUSAT<br>
+        Email: <a href="mailto:malathi@cusat.ac.in">malathi@cusat.ac.in</a><br>
+        IEEE Member No: [To be updated]
+    </p>
+
+    <h3>Finance Committee Chairs</h3>
+    <p>
+        <strong>Dr. Rafidha Rehiman K. A.</strong><br>
+        Assistant Professor<br>
+        Department of Computer Applications, CUSAT<br>
+        Email: <a href="mailto:rafidharehimanka@cusat.ac.in">rafidharehimanka@cusat.ac.in</a><br>
+        IEEE Member No: [To be updated]
+    </p>
+    <p>
+        <strong>Dr. Arun K. S.</strong><br>
+        Assistant Professor<br>
+        Department of Computer Applications, CUSAT<br>
+        Email: <a href="mailto:[email protected]">[email protected]</a><br>
+        IEEE Member No: [To be updated]
+    </p>
+</div>
+
+<h2 id="technical-committee">Technical Committee Members</h2>
+
+    <h3>a) From Kerala</h3>
+    <ul>
+        <li>Dr. Tony Thomas, Digital University Kerala</li>
+        <li>Dr. Vinod Chandra S S, University of Kerala</li>
+        <li>Dr. Aji Sivanandan, University of Kerala</li>
+        <li>Dr. DMN Mubarak, University of Kerala</li>
+        <li>Dr. Surekha Mariam Varghese, Mar Athanasius College of Engineering, Kothamangalam</li>
+        <li>Dr. Salim A, College of Engineering Trivandrum</li>
+        <li>Dr. Shreelekshmi R, College of Engineering Thrissur</li>
+        <li>Dr. Ragesh G K, IIIT Kottayam</li>
+        <li>Dr. Ansamma John, TKM College of Engineering, Kollam</li>
+        <li>Dr. Manu J Pillai, TKM College of Engineering</li>
+        <li>Dr. Santhosh Kumar G, CUSAT</li>
+        <li>Dr. Madhu S Nair, CUSAT</li>
+        <li>Dr. Bindhu V R, MG University</li>
+        <li>Dr. Pushpalatha, MG University</li>
+    </ul>
+
+    <h3>b) From outside Kerala, within India</h3>
+    <ul>
+        <li>Dr. Jyoti Gajrani, GEC Ajmer</li>
+        <li>Dr. Gaurav Singal, NSUT Delhi</li>
+        <li>Dr. Riti Kushwaha, Bennett University</li>
+        <li>Dr. Priyanka Harjule, MNIT Jaipur</li>
+        <li>Dr. Preeti Mishra, Doon University</li>
+        <li>Dr. Jay Dave, LDCE Gujrat</li>
+        <li>Dr. Sonal Yadav, NIT Raipur</li>
+        <li>Dr. Rajbit Kaur, LNMIIT Jaipur</li>
+        <li>Dr. Preety Singh, LNMIIT Jaipur</li>
+        <li>Dr. Shwata Bhandari, LNMIIT Jaipur</li>
+        <li>Dr. Parvez Faruki, AVPTI Rajkot</li>
+        <li>Dr. Urvashi Garg, NIT Jalandhar</li>
+        <li>Dr. Radhamani Govindaraju, GRD College of Science Coimbatore</li>
+        <li>Dr. Shina Sheen, PSG College of Technology Coimbatore</li>
+        <li>Dr. Asha Jerlin, M VIT University, Vellore</li>
+        <li>Dr. Narayanan K, SASTRA University Jaipur</li>
+        <li>Dr. Vinay Kumar Jadoun, Manipal University of Technology</li>
+        <li>Dr. Akshi Kumar, NSUT Delhi</li>
+        <li>Dr. Swetha Saharan, LNMIIT Jaipur</li>
+        <li>Shyam Sundar Ramaswami, Cisco</li>
+        <li>Dr. Sashank Dara, Seconize DeRisk Centre Bangalore</li>
+        <li>Swapneel Patnekar, Shreshta IT Technologies</li>
+        <li>Dr. Jeny Rajan, NIT Surathkal</li>
+        <li>Dr. Gireesh Kumar T, Amrita Vishwa Vidyapeetham</li>
+        <li>Dr. Shyam Diwakar, Amrita Vishwa Vidyapeetham</li>
+        <li>Dr. Yamuna Prasad Shukla, IIT Jammu</li>
+        <li>Dr. Vineet Jakhetiya, IIT Jammu</li>
+        <li>Dr. Manasi Gyanchandani, MNIT Bhopal</li>
+        <li>Dr. Smita Naval, MNIT Jaipur</li>
+        <li>Dr. Jyoti Grover, MNIT Jaipur</li>
+        <li>Dr. Basant Agrawal, IIIT Kota</li>
+        <li>Dr. Renugadevi, IIIT Trichy</li>
+        <li>Dr. B.Ramadoss, NIT Trichy</li>
+        <li>Dr. M Sethumadhavan, Amrita University</li>
+        <li>Dr. G Raju, Christ University</li>
+    </ul>
+
+    <h3>c) From abroad</h3>
+    <ul>
+        <li>Dr. Vineeta Jain, Frahnhofer Germany</li>
+        <li>Dr. Akka Zemmari, Univ. Bordeaux France</li>
+        <li>Dr. Sarada Prasad Gochhayat, Old Dominion University, United States</li>
+        <li>Dr. Pallavi Kaliyar, NTNU Norway</li>
+        <li>Dr. Eduard Marin, Telefonica Research Spain</li>
+        <li>Dr. Luca Demetrio, Università degli Studi di Cagliari Italy</li>
+        <li>Dr. Andrea Di Sorbo, University of Sannio Italy</li>
+        <li>Dr. Stjepan Picek, TUDelft Netherlands</li>
+        <li>Dr. Riccardo Spolaor, Shandong University China</li>
+        <li>Dr. Suleiman Yerima, De Montfort University UK</li>
+        <li>Dr. Irene Amerini, University of Sapienza, Italy</li>
+        <li>Dr. Tegawendé F. Bissyandé, University of Luxembourg</li>
+        <li>Dr. Kevin Allix, University of Luxembourg</li>
+        <li>Dr. Francesco Mercaldo, University of Molise, Campobasso, Italy</li>
+        <li>Dr. Sara Fartooni, University of Sannio Italy</li>
+        <li>Dr. Sonia Laudanna, University of Sannio Italy</li>
+        <li>Dr. Ambra Demontis, Università degli Studi di Cagliari Italy</li>
+        <li>Dr. Marko Robnik-Šikonja, University of Ljubljana</li>
+        <li>Dr. Sasikumar Punnekkat, Malardalen University, Sweden</li>
+        <li>Dr. Sreela Sasi, Gannon University, USA</li>
+        <li>Dr. Darsana Josyula, Bowie State University, USA</li>
+        <li>Dr. Verima Suleiman, University of Demont Fort, UK</li>
+        <li>Dr Mohammad Shojafar, University of Surrey, UK</li>
+        <li>Dr. Zahra Pooranian, The Alan Turing Institute, London, UK</li>
+        <li>Dr. Eleonora Losiouk, University of Padova, Italy</li>
+        <li>Dr. Francesco Mercaldo, University of Pisa, Italy</li>
+        <li>Dr. Corrado Aaron Visaggio, University of Sannio, Italy</li>
+    </ul>
+</div>
+
+    <footer>
+        &copy; AICAPS2026 Conference Organizers
+    </footer>
+
+    <script>
+        function showSubmenu(id, element) {
+            document.querySelectorAll('.submenu').forEach(sm => {
+                sm.style.display = 'none';
+            });
+            document.querySelectorAll('table.navigation a').forEach(a => {
+                a.classList.remove('active');
+            });
+            const selected = document.getElementById(id);
+            if (selected) {
+                selected.style.display = 'block';
+            }
+            if (element) {
+                element.classList.add('active');
+            }
+        }
+
+        window.onload = () => {
+            showSubmenu('homeSub', document.querySelector('table.navigation a.current'));
+        }
+    </script>
+
+</body>
+
+</html>
