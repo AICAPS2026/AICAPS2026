@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 
 <head>
     <base href=".">
@@ -8,11 +8,77 @@
     <meta name="description" content="Conference Template">
     <meta name="resource-type" content="document">
     <meta name="distribution" content="global">
-    <meta name="KeyWords" content="Conference">
+    <meta name="keywords" content="Conference">
     <title>Conference Template</title>
     <style>
+        .banner {
+  
+            width: 100%;
+        
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+.top-left {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 97%;
+    background-color: rgba(240, 240, 240, 0.85);
+    padding: 10px;
+    border-radius: 8px;
+    color: #800000;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.4;
+    z-index: 2;
+}
+
+.bottom-right {
+  
+    bottom: 10px;
+    left: 5px;
+    background-color: rgba(240, 240, 240, 0.85);
+    padding: 5px 5px 20px 5px; /* less bottom padding */
+    border-radius: 8px;
+    color: #800000;
+   
+    font-size: 20px;
+    line-height: 1.2;           /* tighter line spacing */
+
+    text-align: right;
+          /* shrink width to content */
+    max-width: 99%;      
+
+    box-sizing: border-box;      /* include padding in width */
+}
+
+/* Remove default margin on any child elements inside */
+.bottom-right * {
+    margin-top: 0;
+    margin-bottom: 2;
+}
+
+
+        .title1 {
+            display: block;
+            font-size: 22px;
+        }
+
+        .year {
+            display: block;
+            font-size: 18px;
+            margin-top: 5px;
+            color: #333;
+        }
+
         .navigation {
-            font-size: 14px;
+            font-size: 12px;
             padding: 5px 10px;
         }
 
@@ -36,75 +102,13 @@
             font-weight: bold;
         }
 
-        .submenu {
-            display: none;
-            margin: 15px auto 30px auto;
-            padding-left: 20px;
-            background-color: #f9f9f9;
-            border-left: 4px solid #0044cc;
-            max-width: 900px;
-            font-size: 14px;
-            min-height: 40px;
-        }
-
-        .submenu ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 0;
-        }
-
-        .submenu li {
-            margin: 8px 0;
-        }
-
-        .submenu a {
-            text-decoration: none;
-            color: #0077ee;
-        }
-
-        .submenu a:hover {
-            text-decoration: underline;
-        }
-
-        .content-container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        h2 {
-            text-align: center;
-            color: #004080;
-        }
+      
 
         footer {
             text-align: center;
-            margin: 40px 0 20px 0;
+            padding: 20px;
+            color: #666;
             font-size: 14px;
-            color: #777;
-        }
-
-        footer a {
-            color: #0044cc;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .map-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        iframe {
-            width: 90%;
-            height: 400px;
-            border: none;
         }
     </style>
 </head>
@@ -112,30 +116,36 @@
 <body>
 
     <div class="banner">
-        <img src="assets/Cusatnewimage.jpg" alt="Conference Template Banner">
+        
+
+        <img src="assets/Cusatnewimage.jpg" alt="CUSAT Department of Computer Applications">
 
         <div class="top-left">
-            <span class="title1">AICAPS</span>
-            <span class="year">2026</span>
+            <span class="title1">
+                2<sup>nd</sup> International Conference on Advances in Intelligent Computing and Applications<br>
+                AICAPS 2026
+            </span>
         </div>
 
-        <div class="bottom-right" style="color: red;">
-            February 11–13, 2025 <br>
-            Department of Computer Applications, CUSAT, Kochi
+        <div class="bottom-right">
+            February 11–13, 2026<br>
+            Department of Computer Applications, CUSAT, Kochi, Kerala<br>
         </div>
     </div>
 
     <table class="navigation" role="navigation">
         <tr>
-            <td class="navigation"><a href="index.html" class="current active">Home</a></td>
-            <td class="navigation"><a href="important_dates.html">Important Dates</a></td>
-            <td class="navigation"><a href="keynotes.html">Keynotes</a></td>
-            <td class="navigation"><a href="submissions.html">Submissions</a></td>
-            <td class="navigation"><a href="venue.html">Venue &amp; Travel</a></td>
-            <td class="navigation"><a href="committee.html">Committee</a></td>
-            <td class="navigation"><a href="sponsorships.html">Sponsorships</a></td>
+            <td class="navigation"><a href="index.html" class="current active" onclick="showSubmenu('homeSub', this)">Home</a></td>
+            <td class="navigation"><a href="important_dates.html" onclick="showSubmenu(null, this)">Important Dates</a></td>
+            <td class="navigation"><a href="keynotes.html" onclick="showSubmenu('keynotesSub', this)">Keynotes</a></td>
+            <td class="navigation"><a href="submissions.html" onclick="showSubmenu('submissionsSub', this)">Submissions</a></td>
+            <td class="navigation"><a href="venue.html" onclick="showSubmenu('venueSub', this)">Venue &amp; Travel</a></td>
+            <td class="navigation"><a href="committee.html" onclick="showSubmenu('committeeSub', this)">Committee</a></td>
+            <td class="navigation"><a href="sponsorships.html" onclick="showSubmenu('sponsorshipsSub', this)">Registration</a></td>
         </tr>
     </table>
+
+    
 
     <!-- Submenus -->
     <div id="keynotesSub" class="submenu">
@@ -178,42 +188,49 @@
         <strong>Dr. Judy M. V.</strong><br>
         Professor<br>
         Department of Computer Applications, CUSAT<br>
-        Email: <a href="mailto:judy.nair@gmail.com">judy.nair@gmail.com</a><br>
-        IEEE Member No: [To be updated]
+      
+        
     </p>
 
     <h3>Technical Program Committee (TPC) Chair</h3>
     <p>
         <strong>Dr. Vinod P.</strong><br>
-        Professor and Head<br>
+        Professor<br>
         Department of Computer Applications, CUSAT<br>
-        Email: <a href="mailto:vinod.p@cusat.ac.in">vinod.p@cusat.ac.in</a><br>
-        IEEE Member No: [To be updated]
+        
+        
     </p>
-
+	 <h3>Organizing Chair</h3>
+    <p>
+        <strong> Dr. Vishnukumar S.</strong><br>
+        Associate Professor<br>
+        Department of Computer Applications, CUSAT<br>
+        
+        
+    </p>
     <h3>Publication Chairs</h3>
     <p>
         <strong>Dr. Sabu M. K.</strong><br>
         Professor<br>
         Department of Computer Applications, CUSAT<br>
-        Email: <a href="mailto:sabumk@cusat.ac.in">sabumk@cusat.ac.in</a><br>
-        IEEE Member No: [To be updated]
+        
+        
     </p>
     <p>
         <strong>Dr. Deepika M. P.</strong><br>
         Assistant Professor<br>
         Department of Computer Applications, CUSAT<br>
-        Email: <a href="mailto:[email protected]">[email protected]</a><br>
-        IEEE Member No: [To be updated]
+        
+        
     </p>
 
     <h3>Publicity Chair</h3>
     <p>
         <strong>Dr. Malathi S.</strong><br>
-        Professor<br>
+        Assistant Professor<br>
         Department of Computer Applications, CUSAT<br>
         Email: <a href="mailto:malathi@cusat.ac.in">malathi@cusat.ac.in</a><br>
-        IEEE Member No: [To be updated]
+        
     </p>
 
     <h3>Finance Committee Chairs</h3>
@@ -222,40 +239,49 @@
         Assistant Professor<br>
         Department of Computer Applications, CUSAT<br>
         Email: <a href="mailto:rafidharehimanka@cusat.ac.in">rafidharehimanka@cusat.ac.in</a><br>
-        IEEE Member No: [To be updated]
+        
     </p>
     <p>
         <strong>Dr. Arun K. S.</strong><br>
         Assistant Professor<br>
         Department of Computer Applications, CUSAT<br>
-        Email: <a href="mailto:[email protected]">[email protected]</a><br>
-        IEEE Member No: [To be updated]
+        Email: <a href="mailto:iamarunks@gmail.com">iamarunks@gmail.com</a><br>
+      
     </p>
 </div>
 
 <h2 id="technical-committee">Technical Committee Members</h2>
 
-    <h3>a) From Kerala</h3>
-    <ul>
-        <li>Dr. Tony Thomas, Digital University Kerala</li>
-        <li>Dr. Vinod Chandra S S, University of Kerala</li>
-        <li>Dr. Aji Sivanandan, University of Kerala</li>
-        <li>Dr. DMN Mubarak, University of Kerala</li>
-        <li>Dr. Surekha Mariam Varghese, Mar Athanasius College of Engineering, Kothamangalam</li>
-        <li>Dr. Salim A, College of Engineering Trivandrum</li>
-        <li>Dr. Shreelekshmi R, College of Engineering Thrissur</li>
-        <li>Dr. Ragesh G K, IIIT Kottayam</li>
-        <li>Dr. Ansamma John, TKM College of Engineering, Kollam</li>
-        <li>Dr. Manu J Pillai, TKM College of Engineering</li>
-        <li>Dr. Santhosh Kumar G, CUSAT</li>
-        <li>Dr. Madhu S Nair, CUSAT</li>
-        <li>Dr. Bindhu V R, MG University</li>
-        <li>Dr. Pushpalatha, MG University</li>
-    </ul>
-
-    <h3>b) From outside Kerala, within India</h3>
-    <ul>
-        <li>Dr. Jyoti Gajrani, GEC Ajmer</li>
+    
+<ul style="padding-left: 52px; margin-left: 0; list-style-position: inside;">
+	<li>Dr. Vineeta Jain, Frahnhofer Germany</li>
+        <li>Dr. Akka Zemmari, Univ. Bordeaux France</li>
+        <li>Dr. Sarada Prasad Gochhayat, Old Dominion University, United States</li>
+        <li>Dr. Pallavi Kaliyar, NTNU Norway</li>
+        <li>Dr. Eduard Marin, Telefonica Research Spain</li>
+        <li>Dr. Luca Demetrio, Università degli Studi di Cagliari Italy</li>
+        <li>Dr. Andrea Di Sorbo, University of Sannio Italy</li>
+        <li>Dr. Stjepan Picek, TUDelft Netherlands</li>
+        <li>Dr. Riccardo Spolaor, Shandong University China</li>
+        <li>Dr. Suleiman Yerima, De Montfort University UK</li>
+        <li>Dr. Irene Amerini, University of Sapienza, Italy</li>
+        <li>Dr. Tegawendé F. Bissyandé, University of Luxembourg</li>
+        <li>Dr. Kevin Allix, University of Luxembourg</li>
+        <li>Dr. Francesco Mercaldo, University of Molise, Campobasso, Italy</li>
+        <li>Dr. Sara Fartooni, University of Sannio Italy</li>
+        <li>Dr. Sonia Laudanna, University of Sannio Italy</li>
+        <li>Dr. Ambra Demontis, Università degli Studi di Cagliari Italy</li>
+        <li>Dr. Marko Robnik-Šikonja, University of Ljubljana</li>
+        <li>Dr. Sasikumar Punnekkat, Malardalen University, Sweden</li>
+        <li>Dr. Sreela Sasi, Gannon University, USA</li>
+        <li>Dr. Darsana Josyula, Bowie State University, USA</li>
+        <li>Dr. Verima Suleiman, University of Demont Fort, UK</li>
+        <li>Dr Mohammad Shojafar, University of Surrey, UK</li>
+        <li>Dr. Zahra Pooranian, The Alan Turing Institute, London, UK</li>
+        <li>Dr. Eleonora Losiouk, University of Padova, Italy</li>
+        <li>Dr. Francesco Mercaldo, University of Pisa, Italy</li>
+        <li>Dr. Corrado Aaron Visaggio, University of Sannio, Italy</li>
+	<li>Dr. Jyoti Gajrani, GEC Ajmer</li>
         <li>Dr. Gaurav Singal, NSUT Delhi</li>
         <li>Dr. Riti Kushwaha, Bennett University</li>
         <li>Dr. Priyanka Harjule, MNIT Jaipur</li>
@@ -290,38 +316,25 @@
         <li>Dr. B.Ramadoss, NIT Trichy</li>
         <li>Dr. M Sethumadhavan, Amrita University</li>
         <li>Dr. G Raju, Christ University</li>
+
+        <li>Dr. Tony Thomas, Digital University Kerala</li>
+        <li>Dr. Vinod Chandra S S, University of Kerala</li>
+        <li>Dr. Aji Sivanandan, University of Kerala</li>
+        <li>Dr. DMN Mubarak, University of Kerala</li>
+        <li>Dr. Surekha Mariam Varghese, Mar Athanasius College of Engineering, Kothamangalam</li>
+        <li>Dr. Salim A, College of Engineering Trivandrum</li>
+        <li>Dr. Shreelekshmi R, College of Engineering Thrissur</li>
+        <li>Dr. Ragesh G K, IIIT Kottayam</li>
+        <li>Dr. Ansamma John, TKM College of Engineering, Kollam</li>
+        <li>Dr. Manu J Pillai, TKM College of Engineering</li>
+        <li>Dr. Santhosh Kumar G, CUSAT</li>
+        <li>Dr. Madhu S Nair, CUSAT</li>
+        <li>Dr. Bindhu V R, MG University</li>
+        <li>Dr. Pushpalatha, MG University</li>
+	
     </ul>
 
-    <h3>c) From abroad</h3>
-    <ul>
-        <li>Dr. Vineeta Jain, Frahnhofer Germany</li>
-        <li>Dr. Akka Zemmari, Univ. Bordeaux France</li>
-        <li>Dr. Sarada Prasad Gochhayat, Old Dominion University, United States</li>
-        <li>Dr. Pallavi Kaliyar, NTNU Norway</li>
-        <li>Dr. Eduard Marin, Telefonica Research Spain</li>
-        <li>Dr. Luca Demetrio, Università degli Studi di Cagliari Italy</li>
-        <li>Dr. Andrea Di Sorbo, University of Sannio Italy</li>
-        <li>Dr. Stjepan Picek, TUDelft Netherlands</li>
-        <li>Dr. Riccardo Spolaor, Shandong University China</li>
-        <li>Dr. Suleiman Yerima, De Montfort University UK</li>
-        <li>Dr. Irene Amerini, University of Sapienza, Italy</li>
-        <li>Dr. Tegawendé F. Bissyandé, University of Luxembourg</li>
-        <li>Dr. Kevin Allix, University of Luxembourg</li>
-        <li>Dr. Francesco Mercaldo, University of Molise, Campobasso, Italy</li>
-        <li>Dr. Sara Fartooni, University of Sannio Italy</li>
-        <li>Dr. Sonia Laudanna, University of Sannio Italy</li>
-        <li>Dr. Ambra Demontis, Università degli Studi di Cagliari Italy</li>
-        <li>Dr. Marko Robnik-Šikonja, University of Ljubljana</li>
-        <li>Dr. Sasikumar Punnekkat, Malardalen University, Sweden</li>
-        <li>Dr. Sreela Sasi, Gannon University, USA</li>
-        <li>Dr. Darsana Josyula, Bowie State University, USA</li>
-        <li>Dr. Verima Suleiman, University of Demont Fort, UK</li>
-        <li>Dr Mohammad Shojafar, University of Surrey, UK</li>
-        <li>Dr. Zahra Pooranian, The Alan Turing Institute, London, UK</li>
-        <li>Dr. Eleonora Losiouk, University of Padova, Italy</li>
-        <li>Dr. Francesco Mercaldo, University of Pisa, Italy</li>
-        <li>Dr. Corrado Aaron Visaggio, University of Sannio, Italy</li>
-    </ul>
+  
 </div>
 
     <footer>

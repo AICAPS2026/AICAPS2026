@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 
 <head>
     <base href=".">
@@ -8,11 +8,77 @@
     <meta name="description" content="Conference Template">
     <meta name="resource-type" content="document">
     <meta name="distribution" content="global">
-    <meta name="KeyWords" content="Conference">
+    <meta name="keywords" content="Conference">
     <title>Conference Template</title>
     <style>
+        .banner {
+  
+            width: 100%;
+        
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+.top-left {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 97%;
+    background-color: rgba(240, 240, 240, 0.85);
+    padding: 10px;
+    border-radius: 8px;
+    color: #800000;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.4;
+    z-index: 2;
+}
+
+.bottom-right {
+  
+    bottom: 10px;
+    left: 5px;
+    background-color: rgba(240, 240, 240, 0.85);
+    padding: 5px 5px 20px 5px; /* less bottom padding */
+    border-radius: 8px;
+    color: #800000;
+   
+    font-size: 20px;
+    line-height: 1.2;           /* tighter line spacing */
+
+    text-align: right;
+          /* shrink width to content */
+    max-width: 99%;      
+
+    box-sizing: border-box;      /* include padding in width */
+}
+
+/* Remove default margin on any child elements inside */
+.bottom-right * {
+    margin-top: 0;
+    margin-bottom: 2;
+}
+
+
+        .title1 {
+            display: block;
+            font-size: 22px;
+        }
+
+        .year {
+            display: block;
+            font-size: 18px;
+            margin-top: 5px;
+            color: #333;
+        }
+
         .navigation {
-            font-size: 14px;
+            font-size: 12px;
             padding: 5px 10px;
         }
 
@@ -36,88 +102,13 @@
             font-weight: bold;
         }
 
-        .submenu {
-            display: none;
-            margin: 15px auto 30px auto;
-            padding-left: 20px;
-            background-color: #f9f9f9;
-            border-left: 4px solid #0044cc;
-            max-width: 900px;
-            font-size: 14px;
-            min-height: 40px;
-        }
-
-        .submenu ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 0;
-        }
-
-        .submenu li {
-            margin: 8px 0;
-        }
-
-        .submenu a {
-            text-decoration: none;
-            color: #0077ee;
-        }
-
-        .submenu a:hover {
-            text-decoration: underline;
-        }
-
-        .content-container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        h2 {
-            text-align: center;
-            color: #004080;
-        }
+      
 
         footer {
             text-align: center;
-            margin: 40px 0 20px 0;
+            padding: 20px;
+            color: #666;
             font-size: 14px;
-            color: #777;
-        }
-
-        footer a {
-            color: #0044cc;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .map-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        iframe {
-            width: 90%;
-            height: 400px;
-            border: none;
-        }
-
-        .sponsor-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .sponsor-container img {
-            max-width: 150px;
-            height: auto;
-            display: block;
         }
     </style>
 </head>
@@ -125,30 +116,36 @@
 <body>
 
     <div class="banner">
-        <img src="assets/Cusatnewimage.jpg" alt="Conference Template Banner">
+        
+
+        <img src="assets/Cusatnewimage.jpg" alt="CUSAT Department of Computer Applications">
 
         <div class="top-left">
-            <span class="title1">AICAPS</span>
-            <span class="year">2026</span>
+            <span class="title1">
+                2<sup>nd</sup> International Conference on Advances in Intelligent Computing and Applications<br>
+                AICAPS 2026
+            </span>
         </div>
 
-        <div class="bottom-right" style="color: red;">
-            February 11–13, 2025 <br>
-            Department of Computer Applications, CUSAT, Kochi
+        <div class="bottom-right">
+            February 11–13, 2026<br>
+            Department of Computer Applications, CUSAT, Kochi, Kerala<br>
         </div>
     </div>
 
     <table class="navigation" role="navigation">
         <tr>
-            <td class="navigation"><a href="index.html" class="current active" onclick="showSubmenu(null, this)">Home</a></td>
+            <td class="navigation"><a href="index.html" class="current active" onclick="showSubmenu('homeSub', this)">Home</a></td>
             <td class="navigation"><a href="important_dates.html" onclick="showSubmenu(null, this)">Important Dates</a></td>
             <td class="navigation"><a href="keynotes.html" onclick="showSubmenu('keynotesSub', this)">Keynotes</a></td>
             <td class="navigation"><a href="submissions.html" onclick="showSubmenu('submissionsSub', this)">Submissions</a></td>
             <td class="navigation"><a href="venue.html" onclick="showSubmenu('venueSub', this)">Venue &amp; Travel</a></td>
             <td class="navigation"><a href="committee.html" onclick="showSubmenu('committeeSub', this)">Committee</a></td>
-            <td class="navigation"><a href="sponsorships.html" onclick="showSubmenu('sponsorshipsSub', this)">Sponsorships</a></td>
+            <td class="navigation"><a href="sponsorships.html" onclick="showSubmenu('sponsorshipsSub', this)">Registration</a></td>
         </tr>
     </table>
+
+    
 
     <!-- Submenus -->
     <div id="keynotesSub" class="submenu">
@@ -180,51 +177,68 @@
         </ul>
     </div>
 
-<div id="sponsorshipsSub" class="submenu">
-    <p>We are proudly sponsored by the <strong>Kerala IEEE Section</strong>.</p>
-    <div class="sponsor-container">
-        <img src="https://www.ieeer10.org/wp-content/uploads/2020/11/R10-Logo-Text.png" alt="Kerala IEEE Section Logo" />
-        <p>The Kerala IEEE Section supports and promotes this conference.</p>
+    <div id="sponsorshipsSub" class="submenu">
+        <p>Information about sponsorship opportunities will be updated soon.</p>
     </div>
+<div class="content-container" style="width: 80%; margin: 30px auto; font-family: Arial, sans-serif;">
+  <h2 style="text-align: center; color: #800000; margin-bottom: 20px;">Registration Fees</h2>
+
+  <table style="width: 100%; border-collapse: collapse; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <thead>
+      <tr style="background-color: #004080; color: #ffffff; font-size: 18px;">
+        <th style="padding: 12px; border: 1px solid #003366;">Category</th>
+        <th style="padding: 12px; border: 1px solid #003366;">Indian Participants</th>
+        <th style="padding: 12px; border: 1px solid #003366;">Foreign Participants</th>
+        <th style="padding: 12px; border: 1px solid #003366;">Authors</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background-color: #eaf0f8; color: #003366; font-size: 16px;">
+        <td style="padding: 12px; border: 1px solid #b0c4de;">Student</td>
+        <td style="padding: 12px; border: 1px solid #b0c4de;">₹ 5,000</td>
+        <td style="padding: 12px; border: 1px solid #b0c4de;">$ 200</td>
+        <td style="padding: 12px; border: 1px solid #b0c4de;">₹ 7,000</td>
+      </tr>
+      <tr style="background-color: #ffffff; color: #004080; font-size: 16px;">
+        <td style="padding: 12px; border: 1px solid #b0c4de;">Academic / Researcher</td>
+        <td style="padding: 12px; border: 1px solid #b0c4de;">₹ 10,000</td>
+        <td style="padding: 12px; border: 1px solid #b0c4de;">$ 400</td>
+        <td style="padding: 12px; border: 1px solid #b0c4de;">₹ 12,000</td>
+      </tr>
+      <tr style="background-color: #eaf0f8; color: #003366; font-size: 16px;">
+        <td style="padding: 12px; border: 1px solid #b0c4de;">Industry Professional</td>
+        <td style="padding: 12px; border: 1px solid #b0c4de;">₹ 15,000</td>
+        <td style="padding: 12px; border: 1px solid #b0c4de;">$ 600</td>
+        <td style="padding: 12px; border: 1px solid #b0c4de;">₹ 17,000</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
-    <div class="content-container">
-
-        <footer>
-            &copy; AICAPS2026 Conference Organizers
-        </footer>
-
-    </div>
+    <footer>
+        &copy; AICAPS2026 Conference Organizers
+    </footer>
 
     <script>
         function showSubmenu(id, element) {
-            // Hide all submenus
             document.querySelectorAll('.submenu').forEach(sm => {
                 sm.style.display = 'none';
             });
-            // Remove active class from all navigation links
             document.querySelectorAll('table.navigation a').forEach(a => {
                 a.classList.remove('active');
             });
-
-            // Show submenu if id provided
-            if (id) {
-                const selected = document.getElementById(id);
-                if (selected) {
-                    selected.style.display = 'block';
-                }
+            const selected = document.getElementById(id);
+            if (selected) {
+                selected.style.display = 'block';
             }
-
-            // Add active class to clicked link
             if (element) {
                 element.classList.add('active');
             }
         }
 
-        // On page load, hide all submenus and only highlight Home menu
         window.onload = () => {
-            showSubmenu(null, document.querySelector('table.navigation a.current'));
-        };
+            showSubmenu('homeSub', document.querySelector('table.navigation a.current'));
+        }
     </script>
 
 </body>

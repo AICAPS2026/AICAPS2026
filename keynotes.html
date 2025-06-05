@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 
 <head>
     <base href=".">
@@ -8,38 +8,86 @@
     <meta name="description" content="Conference Template">
     <meta name="resource-type" content="document">
     <meta name="distribution" content="global">
-    <meta name="KeyWords" content="Conference">
+    <meta name="keywords" content="Conference">
     <title>Conference Template</title>
     <style>
-.blink {
-    animation: blink-animation 1s steps(2, start) infinite;
-    -webkit-animation: blink-animation 1s steps(2, start) infinite;
-    color: #e60000; /* Optional: red for emphasis */
+        .banner {
+  
+            width: 100%;
+        
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+.top-left {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 97%;
+    background-color: rgba(240, 240, 240, 0.85);
+    padding: 10px;
+    border-radius: 8px;
+    color: #800000;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.4;
+    z-index: 2;
 }
 
-@keyframes blink-animation {
-    to {
-        visibility: hidden;
-    }
+.bottom-right {
+  
+    bottom: 10px;
+    left: 5px;
+    background-color: rgba(240, 240, 240, 0.85);
+    padding: 5px 5px 20px 5px; /* less bottom padding */
+    border-radius: 8px;
+    color: #800000;
+   
+    font-size: 20px;
+    line-height: 1.2;           /* tighter line spacing */
+
+    text-align: right;
+          /* shrink width to content */
+    max-width: 99%;      
+
+    box-sizing: border-box;      /* include padding in width */
 }
+
+/* Remove default margin on any child elements inside */
+.bottom-right * {
+    margin-top: 0;
+    margin-bottom: 2;
+}
+
+
+        .title1 {
+            display: block;
+            font-size: 22px;
+        }
+
+        .year {
+            display: block;
+            font-size: 18px;
+            margin-top: 5px;
+            color: #333;
+        }
 
         .navigation {
-            font-size: 14px;
-            /* Reduce text size */
+            font-size: 12px;
             padding: 5px 10px;
-            /* Reduce cell padding */
         }
 
         table.navigation {
             width: auto;
-            /* Prevent stretching */
             margin: 0 auto;
-            /* Center the table if needed */
             border-spacing: 5px;
-            /* Optional: reduce space between cells */
         }
 
-        /* Make nav links look like buttons */
         table.navigation a {
             cursor: pointer;
             color: #000;
@@ -54,35 +102,13 @@
             font-weight: bold;
         }
 
-        /* Submenu container style */
-        .submenu {
-            display: none;
-            margin: 15px auto 30px auto;
-            padding-left: 20px;
-            background-color: #f9f9f9;
-            border-left: 4px solid #0044cc;
-            max-width: 900px;
+      
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
             font-size: 14px;
-            min-height: 40px;
-        }
-
-        .submenu ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 0;
-        }
-
-        .submenu li {
-            margin: 8px 0;
-        }
-
-        .submenu a {
-            text-decoration: none;
-            color: #0077ee;
-        }
-
-        .submenu a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -90,32 +116,36 @@
 <body>
 
     <div class="banner">
-        <img src="assets/Cusatnewimage.jpg" alt="Conference Template Banner">
+        
+
+        <img src="assets/Cusatnewimage.jpg" alt="CUSAT Department of Computer Applications">
 
         <div class="top-left">
-            <span class="title1">AICAPS</span>
-            <span class="year">2026</span>
+            <span class="title1">
+                2<sup>nd</sup> International Conference on Advances in Intelligent Computing and Applications<br>
+                AICAPS 2026
+            </span>
         </div>
 
-        <div class="bottom-right" style="color: red;">
-            February 11–13, 2025 <br>
-            Department of Computer Applications, CUSAT, Kochi
+        <div class="bottom-right">
+            February 11–13, 2026<br>
+            Department of Computer Applications, CUSAT, Kochi, Kerala<br>
         </div>
     </div>
 
-
     <table class="navigation" role="navigation">
         <tr>
-            <td><a href="index.html">Home</a></td>
-            <td><a href="important_dates.html">Important Dates</a></td>
-            <td><a href="keynotes.html" class="active">Keynotes</a></td>
-            <td><a href="submissions.html">Submissions</a></td>
-            <td><a href="venue.html">Venue &amp; Travel</a></td>
-            <td><a href="committee.html">Committee</a></td>
-            <td><a href="sponsorships.html">Sponsorships</a></td>
+            <td class="navigation"><a href="index.html" class="current active" onclick="showSubmenu('homeSub', this)">Home</a></td>
+            <td class="navigation"><a href="important_dates.html" onclick="showSubmenu(null, this)">Important Dates</a></td>
+            <td class="navigation"><a href="keynotes.html" onclick="showSubmenu('keynotesSub', this)">Keynotes</a></td>
+            <td class="navigation"><a href="submissions.html" onclick="showSubmenu('submissionsSub', this)">Submissions</a></td>
+            <td class="navigation"><a href="venue.html" onclick="showSubmenu('venueSub', this)">Venue &amp; Travel</a></td>
+            <td class="navigation"><a href="committee.html" onclick="showSubmenu('committeeSub', this)">Committee</a></td>
+            <td class="navigation"><a href="sponsorships.html" onclick="showSubmenu('sponsorshipsSub', this)">Registration</a></td>
         </tr>
     </table>
 
+    
     <h1>Keynote Speakers</h1>
   <tr>
 

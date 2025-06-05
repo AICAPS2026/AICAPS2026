@@ -2,63 +2,74 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Submissions - AICAPS 2026</title>
+    <base href=".">
     <link rel="shortcut icon" type="image/png" href="assets/LOGOCUSAT.png" />
     <link rel="stylesheet" type="text/css" media="all" href="assets/main.css" />
+    <meta name="description" content="Conference Template">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta name="keywords" content="Conference">
+    <title>Conference Template</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #222;
+        .banner {
+            width: 100%;
+            overflow: hidden;
         }
 
-        /* Container is centered on page with max width and horizontal margin auto */
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-            color: #222;
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
-        /* Center headings */
-        .container h1,
-        .container h2 {
-            color: #004080;
-            margin-bottom: 1rem;
-            text-align: center;
+        .top-left {
+            position: absolute;
+            top: 20px;
+            left: 5px;
+            width: 97%;
+            background-color: rgba(240, 240, 240, 0.85);
+            padding: 10px;
+            border-radius: 8px;
+            color: #800000;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 1.4;
+            z-index: 2;
         }
 
-        /* Paragraphs and lists left aligned for readability */
-        .container p,
-        .container ul {
-            text-align: left;
+        .bottom-right {
+            bottom: 10px;
+            left: 5px;
+            background-color: rgba(240, 240, 240, 0.85);
+            padding: 5px 5px 20px 5px;
+            border-radius: 8px;
+            color: #800000;
+            font-size: 20px;
+            line-height: 1.2;
+            text-align: right;
+            max-width: 99%;
+            box-sizing: border-box;
         }
 
-        /* Lists style */
-        .container ul {
-            padding-left: 20px; /* default padding for readability */
-            list-style-position: inside;
+        .bottom-right * {
+            margin-top: 0;
+            margin-bottom: 2px;
         }
 
-        .container li {
-            margin-bottom: 10px;
+        .title1 {
+            display: block;
+            font-size: 22px;
         }
 
-        a {
-            color: #004080;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+        .year {
+            display: block;
+            font-size: 18px;
+            margin-top: 5px;
+            color: #333;
         }
 
         .navigation {
-            font-size: 14px;
+            font-size: 12px;
             padding: 5px 10px;
         }
 
@@ -84,74 +95,267 @@
 
         footer {
             text-align: center;
-            margin: 40px 0 20px 0;
+            padding: 20px;
+            color: #666;
             font-size: 14px;
-            color: #777;
         }
 
-        footer a {
-            color: #0044cc;
-            text-decoration: none;
+        /* Styles for track headings and lists */
+        .track {
+            margin-bottom: 30px;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        .track h3 {
+            color: #800000;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #800000;
+            padding-bottom: 4px;
         }
+
+        .track ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            text-align: justify;
+        }
+
     </style>
 </head>
 
 <body>
+
     <div class="banner">
-        <img src="assets/Cusatnewimage.jpg" alt="Conference Banner" />
+        <img src="assets/Cusatnewimage.jpg" alt="CUSAT Department of Computer Applications">
+
         <div class="top-left">
-            <span class="title1">AICAPS</span>
-            <span class="year">2026</span>
+            <span class="title1">
+                2<sup>nd</sup> International Conference on Advances in Intelligent Computing and Applications<br>
+                AICAPS 2026
+            </span>
         </div>
-        <div class="bottom-right" style="color: red;">
-            February 11–13, 2026 <br />
-            Department of Computer Applications, CUSAT, Kochi
+
+        <div class="bottom-right">
+            February 11–13, 2026<br>
+            Department of Computer Applications, CUSAT, Kochi, Kerala<br>
         </div>
     </div>
 
     <table class="navigation" role="navigation">
         <tr>
-            <td><a href="index.html">Home</a></td>
-            <td><a href="important_dates.html">Important Dates</a></td>
-            <td><a href="keynotes.html">Keynotes</a></td>
-            <td><a href="submissions.html" class="active">Submissions</a></td>
-            <td><a href="venue.html">Venue &amp; Travel</a></td>
-            <td><a href="committee.html">Committee</a></td>
-            <td><a href="sponsorships.html">Sponsorships</a></td>
+            <td class="navigation"><a href="index.html" class="current active" onclick="showSubmenu('homeSub', this)">Home</a></td>
+            <td class="navigation"><a href="important_dates.html" onclick="showSubmenu(null, this)">Important Dates</a></td>
+            <td class="navigation"><a href="keynotes.html" onclick="showSubmenu('keynotesSub', this)">Keynotes</a></td>
+            <td class="navigation"><a href="submissions.html" onclick="showSubmenu('submissionsSub', this)">Submissions</a></td>
+            <td class="navigation"><a href="venue.html" onclick="showSubmenu('venueSub', this)">Venue &amp; Travel</a></td>
+            <td class="navigation"><a href="committee.html" onclick="showSubmenu('committeeSub', this)">Committee</a></td>
+            <td class="navigation"><a href="sponsorships.html" onclick="showSubmenu('sponsorshipsSub', this)">Registration</a></td>
         </tr>
     </table>
 
-    <div class="container">
+    <div id="keynotesSub" class="submenu" style="display:none;">
+        <ul>
+            <li><a href="#speaker1">Keynote Speaker 1 - Dr. John Doe</a></li>
+            <li><a href="#speaker2">Keynote Speaker 2 - Prof. Jane Smith</a></li>
+        </ul>
+    </div>
+
+    <div id="submissionsSub" class="submenu" style="display:none;">
+        <ul>
+            <li><a href="#call-for-papers">Call for Papers</a></li>
+            <li><a href="#author-guidelines">Author Guidelines</a></li>
+        </ul>
+    </div>
+
+    <div id="venueSub" class="submenu" style="display:none;">
+        <ul>
+            <li><a href="#conference-venue">Conference Venue</a></li>
+            <li><a href="#how-to-reach">How to Reach</a></li>
+            <li><a href="#tourist-places">Tourist Places Nearby</a></li>
+        </ul>
+    </div>
+
+    <div id="committeeSub" class="submenu" style="display:none;">
+        <ul>
+            <li><a href="#organizing-committee">Organizing Committee</a></li>
+            <li><a href="#technical-committee">Technical Committee</a></li>
+        </ul>
+    </div>
+
+    <div id="sponsorshipsSub" class="submenu" style="display:none;">
+        <p>Information about sponsorship opportunities will be updated soon.</p>
+    </div>
+
+    <div class="container" style="padding: 20px;">
         <h1>Call for Papers</h1>
-        <p>
-            The <strong>2nd International Conference on Advances in Intelligent Computing and Applications (AICAPS) 2026</strong> aims to foster collaboration and knowledge exchange among researchers, academicians, industry professionals, and domain experts. Centered around the theme of Advancements in Intelligent Computing, the event will explore a wide spectrum, from foundational theories to practical implementations, encompassing case studies, ongoing research, and conceptual innovations. The conference aspires to broaden the research outlook by highlighting real-world applications and emerging challenges in the field. It offers an excellent platform for participants to engage with leading experts, gain insights into cutting-edge developments, and explore new directions for impactful research.
+
+        <h2 style="text-align: center;">Conference Tracks</h2>
+
+        <!-- Track 1 -->
+        <div class="track">
+            <h3>Track – 1: Artificial Intelligence and Cognitive Systems</h3>
+            <ul>
+                <li>Evolutionary computing</li>
+                <li>Cognitive psychology and its applications</li>
+                <li>Multi agent systems</li>
+                <li>Social Robotics</li>
+                <li>Knowledge Representation</li>
+                <li>Natural Language Process Technology</li>
+                <li>Data Mining</li>
+                <li>AI &amp; Society</li>
+                <li>Seminar Cognitive Neuroscience</li>
+                <li>Brain Imaging</li>
+                <li>Neural models of cognitive processes</li>
+                <li>Memory and Memory Disorders</li>
+                <li>Evolutionary computing</li>
+                <li>Cognitive psychology and its applications</li>
+            </ul>
+        </div>
+
+        <!-- Track 2 -->
+        <div class="track">
+            <h3>Track – 2: Security, Trust, Privacy and Authentication</h3>
+            <ul>
+                <li>Big Data security and privacy</li>
+                <li>Data protection from ransomware</li>
+                <li>Data transparency and provenance</li>
+                <li>Digital identity management</li>
+                <li>Human and usability factors in Web security &amp; privacy</li>
+                <li>Measurement of online crime/underground economics</li>
+                <li>Tracking, profiling, and countermeasures against them</li>
+                <li>Measurement, analysis, and circumvention of Web censorship</li>
+                <li>Browser security</li>
+                <li>Authentication and authorization for Web-based services</li>
+                <li>Social network security and privacy</li>
+                <li>Transparency, trustworthiness and accountability of social networks</li>
+                <li>Abusive content such as online harassment, spam, and fake reviews</li>
+                <li>Privacy-enhancing technologies for the Web</li>
+                <li>Legal, ethical, policy issues of Web security and privacy</li>
+                <li>Security for Web services</li>
+                <li>Applications of cryptography to the web</li>
+                <li>Security in Web-based electronic commerce</li>
+                <li>Security and privacy for intelligent assistants</li>
+                <li>Blockchain in the context of web security</li>
+                <li>Trust models</li>
+                <li>Artificial Intelligence in the context of web security</li>
+            </ul>
+        </div>
+
+        <!-- Track 3 -->
+        <div class="track">
+            <h3>Track – 3: Cloud, Parallel, Distributed and High Performance Computing</h3>
+            <ul>
+                <li>Cloud Security</li>
+                <li>Cloud Computing for IoT Applications</li>
+                <li>Architectural Models for Cloud Computing</li>
+                <li>Virtualization of the infrastructure</li>
+                <li>Serverless Computing</li>
+                <li>Elasticity in clouds</li>
+                <li>Storage virtualization</li>
+                <li>Green computing models for clouds</li>
+                <li>Programming models for clouds</li>
+                <li>Cloud computing for the mobile world</li>
+                <li>Enterprise Applications on the cloud</li>
+                <li>QoS for applications on clouds</li>
+                <li>Optimization and performance issues on clouds</li>
+                <li>Communication protocols for clouds</li>
+                <li>Databases for clouds</li>
+                <li>Security as a service</li>
+                <li>Big data management and analytics</li>
+                <li>Cloud Storage and Big data analytics</li>
+                <li>Literature Study on parallel computing</li>
+                <li>Parallel System Architectures</li>
+                <li>High Performance Computing</li>
+                <li>Supercomputing</li>
+                <li>Cluster Architecture</li>
+            </ul>
+        </div>
+
+        <!-- Track 4 -->
+        <div class="track">
+            <h3>Track – 4: Software Engineering</h3>
+            <ul>
+                <li>Systems engineering &amp; software engineering</li>
+                <li>Software Development Process Models</li>
+                <li>Component-Based Software Engineering</li>
+                <li>Rapid software development</li>
+                <li>Computer Aided Software Engineering (CASE)</li>
+                <li>Software Requirement Analysis and Specification</li>
+                <li>Elicitation and analysis of requirements</li>
+                <li>Requirement validation</li>
+                <li>Requirement specification</li>
+                <li>Software Design</li>
+                <li>Design of input and Control</li>
+                <li>Design of User Interface design</li>
+                <li>Software Testing and Quality Assurance</li>
+                <li>Verification and validation</li>
+                <li>Design of test cases</li>
+                <li>Quality management activities</li>
+                <li>Product and process quality</li>
+                <li>Managing Software Projects</li>
+                <li>Software Size Estimation and Cost Estimation</li>
+                <li>Project scheduling, Risk management</li>
+                <li>Current trends in Software Engineering</li>
+            </ul>
+        </div>
+
+        <!-- Track 5 -->
+        <div class="track">
+            <h3>Track – 5: Computer Vision and Image Processing</h3>
+            <ul>
+                <li>Biometrics, Forensics, Content Protection</li>
+                <li>Medical Image Analysis</li>
+                <li>3D Image/ Video Processing</li>
+                <li>Image Enhancement /Super Resolution / Restoration</li>
+                <li>Image/ Video Processing for Autonomous Vehicles</li>
+                <li>Activity Detection/ Recognition</li>
+                <li>Segmentation and Shape Representation</li>
+                <li>Human Computer Interaction</li>
+                <li>Computational Imaging</li>
+                <li>Visual Sensor Hardware</li>
+                <li>Document Image Analysis</li>
+                <li>Motion and Tracking</li>
+                <li>Image/ Video Scene Understanding</li>
+                <li>Image/ Video Retrieval</li>
+                <li>Image/ Video Security</li>
+                <li>Vision based Human GAIT Analysis</li>
+                <li>Document and Synthetic Visual Processing</li>
+                <li>Remote Sensing, Hyperspectral Image Processing</li>
+                <li>Compressed Image/ Video Analytics</li>
+                <li>Face, Iris, Emotion, Sign Language and Gesture Recognition</li>
+            </ul>
+        </div>
+
+        <!-- Track 6 -->
+        <div class="track">
+            <h3>Track – 6: Networking, IOT and Sensors</h3>
+            <ul>
+                <li>Network Hardware</li>
+                <li>WANs and Remote Connectivity</li>
+                <li>Wireless Networking</li>
+                <li>Network Operating Systems</li>
+                <li>Voice and Video Over IP</li>
+                <li>Network Security</li>
+                <li>Troubleshooting Network Problems</li>
+                <li>Ensuring Integrity and Availability</li>
+                <li>Network Management</li>
+                <li>IOT Architecture and protocols</li>
+                <li>Platforms for IoT</li>
+                <li>Analog and Digital Sensors</li>
+                <li>Interfacing of Temperature, Humidity, Motion, Light and Gas Sensor</li>
+                <li>Virtualization concepts and Cloud Architecture</li>
+            </ul>
+        </div>
+
+        <h2 style="text-align: center;">Submission Guidelines</h2>
+        <p style="text-align: justify;">
+            Submissions should consist of a PDF with no more than 6 double-column pages, excluding references and appendices (maximum 2 pages), with the total PDF not exceeding 8 pages; use the <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank">IEEE template</a> for your paper, and ensure submissions are anonymous, omitting author names and affiliations. The submitted manuscript should not be published or under review in any journals/magazines or conference proceedings. All the submitted manuscript will be screened through a plagiarism detection process. Submissions that exceed 20% similarity shall not be considered for the review processes. All papers that confirm to the submission guidelines will be peer-reviewed by members of the technical program committee. Submissions will be evaluated on the basis of originality, contribution, soundness, evaluation, quality of presentation, and appropriate comparison to the state of the art. The best paper will be awarded in each track. The manuscript can be submitted through EasyChair Conference Management System.
         </p>
 
-        <h2 style="color:#0044cc;">Conference Tracks</h2>
-        <ul style="list-style-type:none; padding-left: 0;">
-            <li style="color:#d6336c; font-weight:bold; margin-bottom:8px;">Smart Computing and Applications</li>
-            <li style="color:#1e7e34; font-weight:bold; margin-bottom:8px;">Communication and Signal Processing</li>
-            <li style="color:#0d6efd; font-weight:bold; margin-bottom:8px;">Technological Systems for a Secure and Sustainable World</li>
-            <li style="color:#fd7e14; font-weight:bold; margin-bottom:8px;">Intelligent Systems and Analytics</li>
-            <li style="color:#6f42c1; font-weight:bold; margin-bottom:8px;">Smart Embedded Systems</li>
-        </ul>
+        <h2 style="text-align: center;">Submission Website</h2>
+        <p style="text-align: justify;"><strong>To be announced</strong></p>
 
-        <h2>Submission Guidelines</h2>
-        <ul>
-            <li>Submissions should consist of a PDF with no more than 6 double-column pages, excluding references and appendices (max 2 pages). The total PDF must not exceed 8 pages.</li>
-            <li>Paper Format: Use the <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank">IEEE template</a> for your paper.</li>
-            <li>Anonymity: Submissions must be anonymous. Author names and affiliations should not be included.</li>
-        </ul>
-
-        <h2>Submission Website</h2>
-        <p><strong>To be announced</strong></p>
-
-        <h2>Publication</h2>
-        <p>
+        <h2 style="text-align: center;">Publication</h2>
+        <p style="text-align: justify;">
             Accepted papers will be published by IEEE Computer Society Conference Publishing Services (CPS) and will appear in the Computer Society Digital Library and IEEE Xplore&reg; in an AICAPS 2026 volume alongside the main AICAPS 2026 proceedings. An additional small fee might be required.
         </p>
     </div>
@@ -159,6 +363,33 @@
     <footer>
         &copy; AICAPS2026 Conference Organizers
     </footer>
+
+    <script>
+        function showSubmenu(id, element) {
+            // Hide all submenu divs
+            document.querySelectorAll('.submenu').forEach(sm => {
+                sm.style.display = 'none';
+            });
+            // Remove 'active' class from all nav links
+            document.querySelectorAll('table.navigation a').forEach(a => {
+                a.classList.remove('active');
+            });
+            // Show selected submenu
+            if (id) {
+                const selected = document.getElementById(id);
+                if (selected) selected.style.display = 'block';
+            }
+            // Add active class to clicked nav item
+            if (element) {
+                element.classList.add('active');
+            }
+        }
+
+        window.onload = () => {
+            showSubmenu('homeSub', document.querySelector('table.navigation a.current'));
+        }
+    </script>
+
 </body>
 
 </html>

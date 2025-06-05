@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 
 <head>
     <base href=".">
@@ -8,26 +8,86 @@
     <meta name="description" content="Conference Template">
     <meta name="resource-type" content="document">
     <meta name="distribution" content="global">
-    <meta name="KeyWords" content="Conference">
+    <meta name="keywords" content="Conference">
     <title>Conference Template</title>
     <style>
+        .banner {
+  
+            width: 100%;
+        
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+.top-left {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 97%;
+    background-color: rgba(240, 240, 240, 0.85);
+    padding: 10px;
+    border-radius: 8px;
+    color: #800000;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.4;
+    z-index: 2;
+}
+
+.bottom-right {
+  
+    bottom: 10px;
+    left: 5px;
+    background-color: rgba(240, 240, 240, 0.85);
+    padding: 5px 5px 20px 5px; /* less bottom padding */
+    border-radius: 8px;
+    color: #800000;
+   
+    font-size: 20px;
+    line-height: 1.2;           /* tighter line spacing */
+
+    text-align: right;
+          /* shrink width to content */
+    max-width: 99%;      
+
+    box-sizing: border-box;      /* include padding in width */
+}
+
+/* Remove default margin on any child elements inside */
+.bottom-right * {
+    margin-top: 0;
+    margin-bottom: 2;
+}
+
+
+        .title1 {
+            display: block;
+            font-size: 22px;
+        }
+
+        .year {
+            display: block;
+            font-size: 18px;
+            margin-top: 5px;
+            color: #333;
+        }
+
         .navigation {
-            font-size: 14px;
-            /* Reduce text size */
+            font-size: 12px;
             padding: 5px 10px;
-            /* Reduce cell padding */
         }
 
         table.navigation {
             width: auto;
-            /* Prevent stretching */
             margin: 0 auto;
-            /* Center the table if needed */
             border-spacing: 5px;
-            /* Optional: reduce space between cells */
         }
 
-        /* Make nav links look like buttons */
         table.navigation a {
             cursor: pointer;
             color: #000;
@@ -42,35 +102,13 @@
             font-weight: bold;
         }
 
-        /* Submenu container style */
-        .submenu {
-            display: none;
-            margin: 15px auto 30px auto;
-            padding-left: 20px;
-            background-color: #f9f9f9;
-            border-left: 4px solid #0044cc;
-            max-width: 900px;
+      
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
             font-size: 14px;
-            min-height: 40px;
-        }
-
-        .submenu ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 0;
-        }
-
-        .submenu li {
-            margin: 8px 0;
-        }
-
-        .submenu a {
-            text-decoration: none;
-            color: #0077ee;
-        }
-
-        .submenu a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -78,109 +116,65 @@
 <body>
 
     <div class="banner">
-        <img src="assets/Cusatnewimage.jpg" alt="Conference Template Banner">
+        
+
+        <img src="assets/Cusatnewimage.jpg" alt="CUSAT Department of Computer Applications">
 
         <div class="top-left">
-            <span class="title1">AICAPS</span>
-            <span class="year">2026</span>
+            <span class="title1">
+                2<sup>nd</sup> International Conference on Advances in Intelligent Computing and Applications<br>
+                AICAPS 2026
+            </span>
         </div>
 
-        <div class="bottom-right" style="color: red;">
-            February 11–13, 2025 <br>
-            Department of Computer Applications, CUSAT, Kochi
+        <div class="bottom-right">
+            February 11–13, 2026<br>
+            Department of Computer Applications, CUSAT, Kochi, Kerala<br>
         </div>
     </div>
-
 
     <table class="navigation" role="navigation">
         <tr>
-            <td class="navigation"><a href="index.html" class="current active">Home</a></td>
-            <td class="navigation"><a href="important_dates.html">Important Dates</a></td>
-             <td class="navigation"><a href="keynotes.html">Keynotes</a></td>
-        <td class="navigation"><a href="submissions.html">Submissions</a></td>
-        <td class="navigation"><a href="venue.html">Venue &amp; Travel</a></td>
-        <td class="navigation"><a href="committee.html">Committee</a></td>
-        <td class="navigation"><a href="sponsorships.html">Sponsorships</a></td>
+            <td class="navigation"><a href="index.html" class="current active" onclick="showSubmenu('homeSub', this)">Home</a></td>
+            <td class="navigation"><a href="important_dates.html" onclick="showSubmenu(null, this)">Important Dates</a></td>
+            <td class="navigation"><a href="keynotes.html" onclick="showSubmenu('keynotesSub', this)">Keynotes</a></td>
+            <td class="navigation"><a href="submissions.html" onclick="showSubmenu('submissionsSub', this)">Submissions</a></td>
+            <td class="navigation"><a href="venue.html" onclick="showSubmenu('venueSub', this)">Venue &amp; Travel</a></td>
+            <td class="navigation"><a href="committee.html" onclick="showSubmenu('committeeSub', this)">Committee</a></td>
+            <td class="navigation"><a href="sponsorships.html" onclick="showSubmenu('sponsorshipsSub', this)">Registration</a></td>
         </tr>
     </table>
 
-    <!-- Submenus -->
     
-
- 
-
-    <div id="keynotesSub" class="submenu">
-        <ul>
-            <li><a href="#speaker1">Keynote Speaker 1 - Dr. John Doe</a></li>
-            <li><a href="#speaker2">Keynote Speaker 2 - Prof. Jane Smith</a></li>
-        </ul>
-    </div>
-
-    <div id="submissionsSub" class="submenu">
-        <ul>
-            <li><a href="#call-for-papers">Call for Papers</a></li>
-            <li><a href="#author-guidelines">Author Guidelines</a></li>
-        </ul>
-    </div>
-
-    <div id="venueSub" class="submenu">
-        <ul>
-            <li><a href="#conference-venue">Conference Venue</a></li>
-            <li><a href="#how-to-reach">How to Reach</a></li>
-            <li><a href="#tourist-places">Tourist Places Nearby</a></li>
-        </ul>
-    </div>
-
-    <div id="committeeSub" class="submenu">
-        <ul>
-            <li><a href="#organizing-committee">Organizing Committee</a></li>
-            <li><a href="#technical-committee">Technical Committee</a></li>
-        </ul>
-    </div>
-
-    <div id="sponsorshipsSub" class="submenu">
-        <p>Information about sponsorship opportunities will be updated soon.</p>
-    </div>
-
     <h2>AICAPS 2026</h2>
     <p style="text-align: justify;">
-    The <strong>2nd International Conference on Advances in Intelligent Computing and Applications (AICAPS) 2026</strong>
-    aims to foster collaboration and knowledge exchange among researchers, academicians, industry professionals,
-    and domain experts. Centered around the theme of Advancements in Intelligent Computing, the event will explore a
-    wide spectrum, from foundational theories to practical implementations, encompassing case studies, ongoing
-    research, and conceptual innovations. The conference aspires to broaden the research outlook by highlighting
-    real-world applications and emerging challenges in the field. It offers an excellent platform for participants
-    to engage with leading experts, gain insights into cutting-edge developments, and explore new directions for
-    impactful research.
+        The <strong>2nd International Conference on Advances in Intelligent Computing and Applications (AICAPS) 2026</strong>
+        aims to foster collaboration and knowledge exchange among researchers, academicians, industry professionals,
+        and domain experts. Centered around the theme of Advancements in Intelligent Computing, the event will explore a
+        wide spectrum, from foundational theories to practical implementations, encompassing case studies, ongoing
+        research, and conceptual innovations. The conference aspires to broaden the research outlook by highlighting
+        real-world applications and emerging challenges in the field. It offers an excellent platform for participants
+        to engage with leading experts, gain insights into cutting-edge developments, and explore new directions for
+        impactful research.
     </p>
 
     <footer>
         &copy; AICAPS2026 Conference Organizers
-        
     </footer>
 
     <script>
         function showSubmenu(id, element) {
-            // Hide all submenu divs
-            document.querySelectorAll('.submenu').forEach(sm => {
-                sm.style.display = 'none';
-            });
-            // Remove 'active' class from all nav links
-            document.querySelectorAll('table.navigation a').forEach(a => {
-                a.classList.remove('active');
-            });
-            // Show selected submenu
-            const selected = document.getElementById(id);
-            if (selected) {
-                selected.style.display = 'block';
+            document.querySelectorAll('.submenu').forEach(sm => sm.style.display = 'none');
+            document.querySelectorAll('table.navigation a').forEach(a => a.classList.remove('active'));
+            if (id) {
+                const selected = document.getElementById(id);
+                if (selected) selected.style.display = 'block';
             }
-            // Add active class to clicked nav item
             if (element) {
                 element.classList.add('active');
             }
         }
 
-        // Show homeSub by default on page load
         window.onload = () => {
             showSubmenu('homeSub', document.querySelector('table.navigation a.current'));
         }
