@@ -24,6 +24,26 @@
             display: block;
         }
 
+.co-sponsor {
+    position: absolute;
+    top: 120px;           /* adjust this value based on how tall your top-left banner is */
+    right: 25px;          /* moves it to the right corner */
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    color: #003366;       /* IEEE blue tone */
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 3;
+}
+
+.co-sponsor img {
+    margin-top: 6px;
+    width: 200px;         /* adjust logo size */
+    height: auto;
+}
+
 .top-left {
     position: absolute;
     top: 20px;
@@ -132,6 +152,11 @@
            Department of Computer Applications,<br>Cochin University of Science and Technology, Kochi, Kerala, India<br>
 
         </div>
+
+        <div class="co-sponsor">
+    <span>Technically co-sponsored by</span><br>
+    <img src="https://ieeekerala.org/wp-content/uploads/2024/05/cropped-sectionLogoBlue.png">
+</div>
     </div>
 
     <table class="navigation" role="navigation">
@@ -238,3 +263,4 @@
 </body>
 
 </html>
+
