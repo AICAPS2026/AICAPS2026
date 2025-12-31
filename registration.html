@@ -181,6 +181,65 @@
     color: #5A2A27;
     font-weight: bold;
 }
+
+.registration-form-cta {
+    text-align: center;
+    background: #ffffff;
+    padding: 40px 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.form-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #f1f7ff;
+    color: #0057b8;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration-form-cta h2 {
+    margin-bottom: 6px;
+    color: #1f1f3b;
+}
+
+.registration-form-cta p {
+    margin-bottom: 25px;
+    color: #666;
+    font-size: 15px;
+}
+
+.registration-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #0057b8, #007bff);
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0,87,184,0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.registration-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0,87,184,0.45);
+}
+
+.btn-icon,
+.btn-arrow {
+    font-size: 18px;
+}
+        
     </style>
 </head>
 
@@ -402,6 +461,27 @@
   </div>
 
 </div>
+    <br><br>
+
+<div class="registration-form-cta">
+
+  <div class="form-icon">
+    📄
+  </div>
+
+  <h2>Click Below to Access Registration Form</h2>
+  <p>The form will open in a new tab</p>
+
+  <a href="https://YOUR_FORM_LINK_HERE"
+     target="_blank"
+     class="registration-btn">
+     <span class="btn-icon">↗</span>
+     Open Registration Form
+     <span class="btn-arrow">→</span>
+  </a>
+
+</div>
+
    
     
 
@@ -437,6 +517,7 @@
 </body>
 
 </html>
+
 
 
 
