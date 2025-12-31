@@ -239,6 +239,58 @@
 .btn-arrow {
     font-size: 18px;
 }
+
+.important-notes {
+    background: #faf6f6;                 /* soft maroon-tinted background */
+    border-left: 6px solid #5A2A27;       /* maroon accent */
+    padding: 25px 25px 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.notes-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.notes-header h3 {
+    margin: 0;
+    color: #5A2A27;                       /* same as section headings */
+}
+
+.warning-icon {
+    font-size: 22px;
+    color: #5A2A27;
+}
+
+.note-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    padding: 14px 16px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #333333;
+    border: 1px solid #e0e0e0;
+}
+
+.check-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #eef4ff;                  /* light IEEE blue background */
+    color: #0057b8;                       /* IEEE blue */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
         
     </style>
 </head>
@@ -482,6 +534,43 @@
 
 </div>
 
+    <br><br>
+
+<div class="important-notes">
+
+  <div class="notes-header">
+    <span class="warning-icon">⚠️</span>
+    <h3>Important Notes</h3>
+  </div>
+
+  <div class="note-item">
+    <span class="check-icon">✔</span>
+    <span>Ensure payment is completed before filling the form</span>
+  </div>
+
+  <div class="note-item">
+    <span class="check-icon">✔</span>
+    <span>Keep your payment transaction ID/screenshot ready</span>
+  </div>
+
+  <div class="note-item">
+    <span class="check-icon">✔</span>
+    <span>Fill all mandatory fields accurately</span>
+  </div>
+
+      <div class="note-item">
+    <span class="check-icon">✔</span>
+    <span>Upload Student ID/Bonafide Certificate to verify student status</span>
+  </div>
+
+  <div class="note-item">
+<span class="check-icon">✔</span>
+<span>Upload IEEE Membership card to verify IEEE member status</span>
+</div>
+
+</div>
+
+
    
     
 
@@ -517,6 +606,7 @@
 </body>
 
 </html>
+
 
 
 
