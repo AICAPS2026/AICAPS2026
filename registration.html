@@ -130,6 +130,52 @@
             color: #666;
             font-size: 14px;
         }
+
+        .registration-steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.step {
+    width: 30%;
+    text-align: center;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: #0057b8;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step h4 {
+    margin-bottom: 6px;
+    color: #1f1f3b;
+}
+
+.step p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.arrow {
+    font-size: 28px;
+    color: #0057b8;
+    font-weight: bold;
+}
     </style>
 </head>
 
@@ -320,6 +366,40 @@
     
 </div>
 
+ <br><br>
+
+<h2 style="text-align:center; color:#2c2c54; margin-bottom:25px;">
+  Registration Process
+</h2>
+
+<div class="registration-steps">
+  
+  <div class="step">
+    <div class="circle">1</div>
+    <h4>Complete Payment</h4>
+    <p>Make the registration fee payment using the bank details / QR code</p>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="step">
+    <div class="circle">2</div>
+    <h4>Fill Registration Form</h4>
+    <p>Click the button below to open the registration form</p>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="step">
+    <div class="circle">3</div>
+    <h4>Submit Form</h4>
+    <p>Complete all required fields and submit the form</p>
+  </div>
+
+</div>
+   
+    
+
 
 
 
@@ -352,6 +432,7 @@
 </body>
 
 </html>
+
 
 
 
